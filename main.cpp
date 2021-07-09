@@ -233,21 +233,21 @@ I should not be allowed near this
 			nonce_start[1] = ' ' + ((nonce >> 6) & 0x3F);
 //		if ((nonce & 0xfff) == 0)
 			nonce_start[2] = ' ' + ((nonce >> 12) & 0x3F);
-		if ((nonce & 0x3ffff) == 0)
+		if ((nonce & 0x3ffff) == 1)
 			nonce_start[3] = ' ' + ((nonce >> 18) & 0x3F);
-		if ((nonce & 0xffffff) == 0)
+		if ((nonce & 0xffffff) == 3)
 			nonce_start[4] = ' ' + ((nonce >> 24) & 0x3F);
-		if ((nonce & 0x3fffffff) == 0)
+		if ((nonce & 0x3fffffff) == 3)
 			nonce_start[5] = ' ' + ((nonce >> 30) & 0x3F);
-		if ((nonce & 0xfffffffff) == 0)
+		if ((nonce & 0xfffffffff) == 3)
 			nonce_start[6] = ' ' + ((nonce >> 36) & 0x3F);
-		if ((nonce & 0x3ffffffffff) == 0)
+		if ((nonce & 0x3ffffffffff) == 3)
 			nonce_start[7] = ' ' + ((nonce >> 42) & 0x3F);
-		if ((nonce & 0xffffffffffff) == 0)
+		if ((nonce & 0xffffffffffff) == 3)
 			nonce_start[8] = ' ' + ((nonce >> 48) & 0x3F);
-		if ((nonce & 0x3fffffffffffff) == 0)
+		if ((nonce & 0x3fffffffffffff) == 3)
 			nonce_start[9] = ' ' + ((nonce >> 54) & 0x3F);
-		if ((nonce & 0xfffffffffffffff) == 0)
+		if ((nonce & 0xfffffffffffffff) == 3)
 			nonce_start[10] = ' ' + ((nonce >> 60) & 0x3F);
 
 		// The slow part
